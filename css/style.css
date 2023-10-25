@@ -1,0 +1,26 @@
+/* #region IMPORT */
+
+@import url(../_partials/variables.css);
+
+/* #endregion */
+
+/* #region HEADER */
+
+#logo {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.dg-form-control:focus {
+  border-color: #dee2e6;
+}
+
+.dg-bell-color {
+  color: var(--bell-color);
+}
+
+.dg-w800 {
+  width: 800px;
+}
+
+/* #endregion */

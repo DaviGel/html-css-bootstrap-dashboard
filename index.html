@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Dashboard</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Mio Stile CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar position-fixed top-0 start-0 end-0">
+        <div class="container-fluid">
+          <!-- Loghi -->
+          <img
+            src="img/mobile-logo.png"
+            alt="mobile-logo img"
+            id="logo"
+            class="img-fluid d-block d-xl-none"
+          />
+          <img src="img/logo.svg" alt="logo img" class="d-none d-xl-block" />
+          <!-- Form di ricerca -->
+          <form class="d-flex flex-grow-1 px-3" role="search">
+            <span
+              class="input-group-text bg-white border-end-0 rounded-0 rounded-start"
+              id="basic-addon1"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
+            <input
+              class="form-control dg-form-control me-2 border-start-0 rounded-0 rounded-end shadow-none"
+              type="search"
+              placeholder="Prova a cercare: Lezioni di Laravel"
+              aria-label="Search"
+            />
+          </form>
+          <!-- Icone nella nav a destra della barra di ricerca -->
+          <i
+            class="fa-solid fa-list-ul px-2 text-dark-emphasis d-none d-xl-block"
+          ></i>
+          <i
+            class="fa-solid fa-circle-question px-2 text-dark-emphasis d-none d-xl-block"
+          ></i>
+          <i
+            class="fa-solid fa-ellipsis-vertical px-2 text-dark-emphasis d-none d-xl-block"
+          ></i>
+          <button
+            class="btn px-2 text-dark-emphasis"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <i class="fa-solid fa-bell dg-bell-color"></i>
+          </button>
+          <!-- Offcanvas -->
+          <div
+            class="offcanvas offcanvas-end dg-w800"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                Inserisci un nuovo studente
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <!-- Form nell'offcanvas -->
+            <div class="offcanvas-body">
+              <div class="row">
+                <!-- Nome -->
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="name" />
+                  </div>
+                </div>
+                <!-- Cognome -->
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="surname" class="form-label">Cognome</label>
+                    <input type="text" class="form-control" id="surname" />
+                  </div>
+                </div>
+                <!-- Email -->
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-group">
+                      <span class="input-group-text" id="basic-addon3">@</span>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        aria-describedby="basic-addon3 basic-addon4"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- Password -->
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                    />
+                  </div>
+                </div>
+                <!-- Indirizzo -->
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="exampleInputAddress" class="form-label"
+                      >Indirizzo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputAddress"
+                    />
+                  </div>
+                </div>
+                <!-- Città -->
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="exampleInputCity" class="form-label"
+                      >Città</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputCity"
+                    />
+                  </div>
+                </div>
+                <!-- Stato -->
+                <div class="col-4">
+                  <div class="mb-3">
+                    <label for="exampleInputState" class="form-label"
+                      >Stato</label
+                    >
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      id="exampleInputCity"
+                    >
+                      <option selected>Scegli...</option>
+                      <option value="1">Italia</option>
+                      <option value="2">Francia</option>
+                      <option value="3">Germania</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- CAP -->
+                <div class="col-2">
+                  <div class="mb-3">
+                    <label for="exampleInputNumber" class="form-label"
+                      >CAP</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="exampleInputNumber"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main></main>
+    <!-- Bootstrap Javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
