@@ -4,11 +4,24 @@
 
 /* #endregion */
 
+/* #region BODY */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* #endregion */
+
 /* #region HEADER */
 
 #logo {
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+header nav {
+  height: 70px;
 }
 
 .dg-form-control:focus {
@@ -19,8 +32,62 @@
   color: var(--bell-color);
 }
 
-.dg-w800 {
-  width: 800px;
+nav .offcanvas.dg-w800 {
+  width: 100vw;
+}
+
+/* #endregion */
+
+/* #region MAIN */
+
+main {
+  padding-top: 70px;
+  overflow-y: auto;
+}
+
+/* Sidebar */
+main div.dg-sidebar {
+  width: 70px;
+  height: calc(100vh - 70px);
+  background-color: #051e34;
+  background-image: url('../img/sidebar-bg.png');
+}
+
+/* Main content */
+main .dg-status-bar {
+  background-color: #1b72e8;
+}
+
+main .dg-background-breadcrumb {
+  background-color: #165bba;
+  border-radius: 30px;
+}
+
+main .breadcrumb {
+  --bs-breadcrumb-divider: '';
+  font-size: 12px;
+}
+
+main .row .table img {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+/* #endregion */
+
+/* #region MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+  nav .offcanvas.dg-w800 {
+    width: 800px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main div.dg-sidebar {
+    width: 150px;
+    flex: initial;
+  }
 }
 
 /* #endregion */
