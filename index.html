@@ -86,6 +86,7 @@
                     class="btn border-0 p-0"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    data-bs-offset="10,20"
                   >
                     <i class="fa-solid fa-bell dg-bell-color"></i>
                   </button>
@@ -153,7 +154,7 @@
         <div class="dg-status-bar p-2">
           <div class="row m-0 flex-column flex-md-row align-items-baseline">
             <div class="col-7 col-md-6 order-1 order-md-0">
-              <div class="d-flex align-items-center">
+              <div class="d-flex align-items-center mt-3">
                 <h1 class="me-2 mb-2">Boolean</h1>
                 <nav aria-label="breadcrumb gap-4">
                   <ol class="breadcrumb align-items-center gap-1 mb-2">
@@ -161,7 +162,9 @@
                       class="breadcrumb-item active text-white dg-background-breadcrumb text-center p-2"
                       aria-current="page"
                     >
-                      Piano blaze
+                      <a href="#" class="text-decoration-none text-white"
+                        >Piano blaze</a
+                      >
                     </li>
                   </ol>
                 </nav>
@@ -172,32 +175,40 @@
                     class="breadcrumb-item active text-white dg-background-breadcrumb text-center p-2"
                     aria-current="page"
                   >
-                    3 app
+                    <a href="#" class="text-decoration-none text-white"
+                      >3 app</a
+                    >
                   </li>
                   <li><i class="fa-solid fa-angles-right"></i></li>
                   <li
                     class="breadcrumb-item active text-white dg-background-breadcrumb text-center d-none d-lg-block p-2"
                     aria-current="page"
                   >
-                    Boolean mobile app
+                    <a href="#" class="text-decoration-none text-white"
+                      >Boolean mobile app</a
+                    >
                   </li>
                   <li
                     class="breadcrumb-item active text-white dg-background-breadcrumb text-center d-none d-lg-block p-2"
                     aria-current="page"
                   >
-                    Boolean web app
+                    <a href="#" class="text-decoration-none text-white">
+                      Boolean web app</a
+                    >
                   </li>
                   <li
                     class="breadcrumb-item active text-white dg-background-breadcrumb text-center d-none d-lg-block p-2"
                     aria-current="page"
                   >
-                    Boolean blog app
+                    <a href="#" class="text-decoration-none text-white">
+                      Boolean blog app</a
+                    >
                   </li>
                   <li
                     class="breadcrumb-item active text-white dg-background-breadcrumb text-center d-block d-lg-none p-2"
                     aria-current="page"
                   >
-                    +
+                    <a href="#" class="text-decoration-none text-white">+</a>
                   </li>
                 </ol>
               </nav>
@@ -207,7 +218,9 @@
               <div class="fs-2">125</div>
             </div>
             <div class="col order-0">
-              <div class="d-flex align-items-center">
+              <div
+                class="d-flex align-items-center justify-content-start justify-content-lg-center"
+              >
                 <div>Nuovo studente</div>
                 <button
                   class="btn px-2 text-dark-emphasis"
@@ -222,153 +235,173 @@
                 </button>
               </div>
               <!-- Offcanvas -->
-              <div
-                class="offcanvas offcanvas-end dg-w800"
-                tabindex="-1"
-                id="offcanvasRight"
-                aria-labelledby="offcanvasRightLabel"
-              >
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasRightLabel">
-                    Inserisci un nuovo studente
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <!-- Form nell'offcanvas -->
-                <div class="offcanvas-body">
-                  <div class="row">
-                    <!-- Nome -->
-                    <div class="col-6">
-                      <div class="mb-3">
-                        <label for="name" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="name" />
+              <form>
+                <div
+                  class="offcanvas offcanvas-end dg-w800"
+                  tabindex="-1"
+                  id="offcanvasRight"
+                  aria-labelledby="offcanvasRightLabel"
+                >
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                      Inserisci un nuovo studente
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <!-- Form nell'offcanvas -->
+                  <div class="offcanvas-body">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div class="col-6">
+                        <div class="mb-3">
+                          <label for="name" class="form-label">Nome</label>
+                          <input type="text" class="form-control" id="name" />
+                        </div>
                       </div>
-                    </div>
-                    <!-- Cognome -->
-                    <div class="col-6">
-                      <div class="mb-3">
-                        <label for="surname" class="form-label">Cognome</label>
-                        <input type="text" class="form-control" id="surname" />
-                      </div>
-                    </div>
-                    <!-- Email -->
-                    <div class="col-6">
-                      <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <div class="input-group">
-                          <span class="input-group-text" id="basic-addon3"
-                            >@</span
+                      <!-- Cognome -->
+                      <div class="col-6">
+                        <div class="mb-3">
+                          <label for="surname" class="form-label"
+                            >Cognome</label
                           >
                           <input
-                            type="email"
+                            type="text"
                             class="form-control"
-                            id="email"
-                            aria-describedby="basic-addon3 basic-addon4"
+                            id="surname"
+                          />
+                        </div>
+                      </div>
+                      <!-- Email -->
+                      <div class="col-6">
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <div class="input-group">
+                            <span class="input-group-text" id="basic-addon3"
+                              >@</span
+                            >
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="email"
+                              aria-describedby="basic-addon3 basic-addon4"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Password -->
+                      <div class="col-6">
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+                      </div>
+                      <!-- Indirizzo -->
+                      <div class="col-12">
+                        <div class="mb-3">
+                          <label for="exampleInputAddress" class="form-label"
+                            >Indirizzo</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputAddress"
+                          />
+                        </div>
+                      </div>
+                      <!-- Città -->
+                      <div class="col-6">
+                        <div class="mb-3">
+                          <label for="exampleInputCity" class="form-label"
+                            >Città</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputCity"
+                          />
+                        </div>
+                      </div>
+                      <!-- Stato -->
+                      <div class="col-4">
+                        <div class="mb-3">
+                          <label for="exampleInputState" class="form-label"
+                            >Stato</label
+                          >
+                          <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            id="exampleInputCity"
+                          >
+                            <option selected>Scegli...</option>
+                            <option value="1">Italia</option>
+                            <option value="2">Francia</option>
+                            <option value="3">Germania</option>
+                          </select>
+                        </div>
+                      </div>
+                      <!-- CAP -->
+                      <div class="col-2">
+                        <div class="mb-3">
+                          <label for="exampleInputNumber" class="form-label"
+                            >CAP</label
+                          >
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="exampleInputNumber"
+                          />
+                        </div>
+                      </div>
+                      <!-- Upload file -->
+                      <div class="col-12">
+                        <div class="mb-3">
+                          <label for="formFile" class="form-label">Foto</label>
+                          <input
+                            class="form-control"
+                            type="file"
+                            id="formFile"
                           />
                         </div>
                       </div>
                     </div>
-                    <!-- Password -->
-                    <div class="col-6">
-                      <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label"
-                          >Password</label
-                        >
-                        <input
-                          type="password"
-                          class="form-control"
-                          id="exampleInputPassword1"
-                        />
-                      </div>
+                    <div class="form-check mb-3">
+                      <!-- Check-box -->
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Seleziona per proseguire
+                      </label>
                     </div>
-                    <!-- Indirizzo -->
-                    <div class="col-12">
-                      <div class="mb-3">
-                        <label for="exampleInputAddress" class="form-label"
-                          >Indirizzo</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="exampleInputAddress"
-                        />
-                      </div>
-                    </div>
-                    <!-- Città -->
-                    <div class="col-6">
-                      <div class="mb-3">
-                        <label for="exampleInputCity" class="form-label"
-                          >Città</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="exampleInputCity"
-                        />
-                      </div>
-                    </div>
-                    <!-- Stato -->
-                    <div class="col-4">
-                      <div class="mb-3">
-                        <label for="exampleInputState" class="form-label"
-                          >Stato</label
-                        >
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                          id="exampleInputCity"
-                        >
-                          <option selected>Scegli...</option>
-                          <option value="1">Italia</option>
-                          <option value="2">Francia</option>
-                          <option value="3">Germania</option>
-                        </select>
-                      </div>
-                    </div>
-                    <!-- CAP -->
-                    <div class="col-2">
-                      <div class="mb-3">
-                        <label for="exampleInputNumber" class="form-label"
-                          >CAP</label
-                        >
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="exampleInputNumber"
-                        />
-                      </div>
-                    </div>
-                    <!-- Upload file -->
-                    <div class="col-12">
-                      <div class="mb-3">
-                        <label for="formFile" class="form-label">Foto</label>
-                        <input class="form-control" type="file" id="formFile" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-check mb-3">
-                    <!-- Check-box -->
+                    <!-- Salva -->
                     <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
+                      class="btn btn-primary"
+                      type="submit"
+                      value="Salva"
                     />
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Seleziona per proseguire
-                    </label>
+                    <!-- Svuota -->
+                    <input
+                      class="btn btn-warning"
+                      type="reset"
+                      value="Svuota"
+                    />
                   </div>
-                  <!-- Salva -->
-                  <input class="btn btn-primary" type="submit" value="Salva" />
-                  <!-- Svuota -->
-                  <input class="btn btn-warning" type="reset" value="Svuota" />
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -390,8 +423,8 @@
                           Data inizio
                         </th>
                         <th scope="col" class="d-none d-md-table-cell">ROI</th>
-                        <th scope="col">Stato</th>
-                        <th scope="col">Azioni</th>
+                        <th scope="col" class="text-center">Stato</th>
+                        <th scope="col" class="text-center">Azioni</th>
                       </tr>
                     </thead>
                     <tbody class="align-middle">
@@ -408,15 +441,15 @@
                         </td>
                         <td class="d-none d-md-table-cell">15 Febbraio 2021</td>
                         <td class="d-none d-md-table-cell">20%</td>
-                        <td>
+                        <td class="text-center">
                           <div class="dg-badge bg-success">Done</div>
                         </td>
-                        <td>
+                        <td class="text-center">
                           <i
-                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2 me-2 dg-hover-background"
                           ></i
                           ><i
-                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2 dg-hover-background"
                           ></i>
                         </td>
                       </tr>
@@ -428,20 +461,20 @@
                               alt="avatar img"
                               class="me-2"
                             />
-                            Classe 75
+                            Classe 76
                           </div>
                         </td>
-                        <td class="d-none d-md-table-cell">15 Febbraio 2021</td>
+                        <td class="d-none d-md-table-cell">16 Febbraio 2021</td>
                         <td class="d-none d-md-table-cell">20%</td>
-                        <td>
+                        <td class="text-center">
                           <div class="dg-badge bg-success">Done</div>
                         </td>
-                        <td>
+                        <td class="text-center">
                           <i
-                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2 me-2 dg-hover-background"
                           ></i
                           ><i
-                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2 dg-hover-background"
                           ></i>
                         </td>
                       </tr>
@@ -453,20 +486,20 @@
                               alt="avatar img"
                               class="me-2"
                             />
-                            Classe 75
+                            Classe 77
                           </div>
                         </td>
-                        <td class="d-none d-md-table-cell">15 Febbraio 2021</td>
+                        <td class="d-none d-md-table-cell">17 Febbraio 2021</td>
                         <td class="d-none d-md-table-cell">20%</td>
-                        <td>
+                        <td class="text-center">
                           <div class="dg-badge bg-warning">Process</div>
                         </td>
-                        <td>
+                        <td class="text-center">
                           <i
-                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2 me-2 dg-hover-background"
                           ></i
                           ><i
-                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2 dg-hover-background"
                           ></i>
                         </td>
                       </tr>
@@ -478,20 +511,20 @@
                               alt="avatar img"
                               class="me-2"
                             />
-                            Classe 75
+                            Classe 78
                           </div>
                         </td>
-                        <td class="d-none d-md-table-cell">15 Febbraio 2021</td>
+                        <td class="d-none d-md-table-cell">18 Febbraio 2021</td>
                         <td class="d-none d-md-table-cell">20%</td>
-                        <td>
+                        <td class="text-center">
                           <div class="dg-badge bg-success">Done</div>
                         </td>
-                        <td>
+                        <td class="text-center">
                           <i
-                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2 me-2 dg-hover-background"
                           ></i
                           ><i
-                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2 dg-hover-background"
                           ></i>
                         </td>
                       </tr>
@@ -503,20 +536,20 @@
                               alt="avatar img"
                               class="me-2"
                             />
-                            Classe 75
+                            Classe 79
                           </div>
                         </td>
-                        <td class="d-none d-md-table-cell">15 Febbraio 2021</td>
+                        <td class="d-none d-md-table-cell">19 Febbraio 2021</td>
                         <td class="d-none d-md-table-cell">20%</td>
-                        <td>
+                        <td class="text-center">
                           <div class="dg-badge bg-danger">Failed</div>
                         </td>
-                        <td>
+                        <td class="text-center">
                           <i
-                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2 me-2 dg-hover-background"
                           ></i
                           ><i
-                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2 dg-hover-background"
                           ></i>
                         </td>
                       </tr>
@@ -528,20 +561,20 @@
                               alt="avatar img"
                               class="me-2"
                             />
-                            Classe 75
+                            Classe 80
                           </div>
                         </td>
-                        <td class="d-none d-md-table-cell">15 Febbraio 2021</td>
+                        <td class="d-none d-md-table-cell">20 Febbraio 2021</td>
                         <td class="d-none d-md-table-cell">20%</td>
-                        <td>
+                        <td class="text-center">
                           <div class="dg-badge bg-success">Done</div>
                         </td>
-                        <td>
+                        <td class="text-center">
                           <i
-                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2 me-2 dg-hover-background"
                           ></i
                           ><i
-                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2 dg-hover-background"
                           ></i>
                         </td>
                       </tr>
@@ -553,20 +586,20 @@
                               alt="avatar img"
                               class="me-2"
                             />
-                            Classe 75
+                            Classe 81
                           </div>
                         </td>
-                        <td class="d-none d-md-table-cell">15 Febbraio 2021</td>
+                        <td class="d-none d-md-table-cell">21 Febbraio 2021</td>
                         <td class="d-none d-md-table-cell">20%</td>
-                        <td>
+                        <td class="text-center">
                           <div class="dg-badge bg-danger">Failed</div>
                         </td>
-                        <td>
+                        <td class="text-center">
                           <i
-                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2 me-2 dg-hover-background"
                           ></i
                           ><i
-                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2 dg-hover-background"
                           ></i>
                         </td>
                       </tr>
@@ -578,20 +611,20 @@
                               alt="avatar img"
                               class="me-2"
                             />
-                            Classe 75
+                            Classe 82
                           </div>
                         </td>
-                        <td class="d-none d-md-table-cell">15 Febbraio 2021</td>
+                        <td class="d-none d-md-table-cell">22 Febbraio 2021</td>
                         <td class="d-none d-md-table-cell">20%</td>
-                        <td>
+                        <td class="text-center">
                           <div class="dg-badge bg-success">Done</div>
                         </td>
-                        <td>
+                        <td class="text-center">
                           <i
-                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-pencil text-secondary border border-secondary rounded p-2 me-2 dg-hover-background"
                           ></i
                           ><i
-                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2"
+                            class="fa-solid fa-trash text-secondary border border-secondary rounded p-2 dg-hover-background"
                           ></i>
                         </td>
                       </tr>

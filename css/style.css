@@ -89,6 +89,12 @@ main .dg-badge {
   font-size: 10px;
 }
 
+main .dg-hover-background:hover {
+  background-color: #6d757d;
+  color: #fff !important;
+  cursor: pointer;
+}
+
 /* #endregion */
 
 /* #region MEDIA QUERIES */
