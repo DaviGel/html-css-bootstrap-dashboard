@@ -54,6 +54,10 @@ main div.dg-sidebar {
 }
 
 /* Main content */
+main .dg-main-content {
+  height: inherit;
+}
+
 main .dg-status-bar {
   background-color: #1b72e8;
 }
@@ -73,8 +77,16 @@ main .row .table img {
   height: 1.875rem;
 }
 
-main .card:last-child img {
-  max-width: 33.125rem;
+main .offcanvas.dg-w800 {
+  width: 100vw;
+}
+
+main .dg-badge {
+  display: inline-block;
+  padding: 5px;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 10px;
 }
 
 /* #endregion */
@@ -82,7 +94,7 @@ main .card:last-child img {
 /* #region MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {
-  nav .offcanvas.dg-w800 {
+  main .offcanvas.dg-w800 {
     width: 800px;
   }
 }
