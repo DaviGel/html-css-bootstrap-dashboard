@@ -20,7 +20,7 @@ body {
   height: 2.5rem;
 }
 
-header nav {
+header {
   height: 70px;
 }
 
@@ -41,14 +41,14 @@ nav .offcanvas.dg-w800 {
 /* #region MAIN */
 
 main {
-  padding-top: 70px;
-  overflow-y: auto;
+  background-color: #f8f9fa;
+  height: calc(100vh - 70px);
 }
 
 /* Sidebar */
 main div.dg-sidebar {
   width: 70px;
-  height: calc(100vh - 70px);
+
   background-color: #051e34;
   background-image: url('../img/sidebar-bg.png');
 }
@@ -71,6 +71,10 @@ main .breadcrumb {
 main .row .table img {
   width: 1.875rem;
   height: 1.875rem;
+}
+
+main .card:last-child img {
+  max-width: 33.125rem;
 }
 
 /* #endregion */
