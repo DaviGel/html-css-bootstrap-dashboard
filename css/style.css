@@ -95,6 +95,25 @@ main .dg-hover-background:hover {
   cursor: pointer;
 }
 
+main .dg-hover-tr:hover > * {
+  background-color: #e2e3e5;
+}
+
+main .dg-hover-sidebar-icons:hover {
+  background-color: #6a7076;
+}
+
+main .dg-sidebar .list-group li i {
+  width: 20px;
+}
+
+main .dg-sidebar .list-group li {
+  max-width: 100px;
+}
+
+main .dg-sidebar .list-group li span {
+}
+
 /* #endregion */
 
 /* #region MEDIA QUERIES */
